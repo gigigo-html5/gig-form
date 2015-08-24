@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="fragment" content="!">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Gig Component fieldMap Demo</title>
+    <link rel="import" href="/demo/gig-form.html">
+    <link rel="import" href="/bower_components/gig-input/gig-input.html">
+    <link rel="import" href="/bower_components/gig-button/gig-button.html">
+
+    <style is="custom-style">
+        .field {
+            position:relative;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <gig-form>
+        <div class="field">
+            <gig-input type="text" name="name" placeholder="name" required></gig-input>
+        </div>
+        <div class="field">
+            <gig-input type="text" name="surname" placeholder="surname" required></gig-input>
+        </div>
+
+        <div class="field">
+            <gig-input type="email" name="email" placeholder="email" required></gig-input>
+        </div>
+
+        <div class="field">
+            <gig-button class="btn-primary">SEND</gig-button>
+        </div>
+
+    </gig-form>
+
+
+</body>
+
+</html>

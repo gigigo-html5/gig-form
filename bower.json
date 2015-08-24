@@ -1,0 +1,20 @@
+{
+  "name": "gig-form",
+  "version": "0.0.1",
+  "homepage": "https://github.com/gigigo-html5/gig-form",
+  "authors": [
+    "Pedro Peña <pedro.jose@gigigo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.0.9",
+    "iron-form": "PolymerElements/iron-form#~1.0.8"
+  }
+}
