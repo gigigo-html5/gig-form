@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "polymer": "~1.0.9",
-    "iron-form": "PolymerElements/iron-form#~1.0.8"
+    "i18next": "~1.10.2",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.0.4"
   }
 }
