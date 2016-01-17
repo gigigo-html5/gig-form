@@ -1,6 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-ajax/iron-ajax.html">
-<script src="../i18next/i18next.js"></script>
 
 <dom-module id="gig-form">
 
@@ -34,7 +33,6 @@
                     this._requestBot = document.createElement('iron-ajax');
                     this._requestBot.addEventListener('response', this._handleFormResponse.bind(this));
                     this._requestBot.addEventListener('error', this._handleFormError.bind(this));
-                    this._generateLang();
                 },
                 submit: function() {
 
@@ -118,13 +116,13 @@
                     var validatable;
 
                     for (var el, i = 0; el = this.elementsForm[i], i < this.elementsForm.length; i++) {
-                        if (el.required && this._useValue(el)) {
-                            validatable = /** @type {{validate: (function() : boolean)}} */ (el);
-                            // Some elements may not have correctly defined a validate method.
+                        if (this._useValue(el)) {
+                            validatable = (el);
                             if (validatable.validate)
                             valid = !!validatable.validate() && valid;
                         }
                     }
+
 
                     return valid;
                 },
@@ -165,10 +163,10 @@
                         if (el.invalid) {
 
                             if (el.type === 'email') {
-                                el.errorMessage = self.txtInputErrorEmail;
+                                el.errorMessage = this.errorMessage.email;
                             }
                             if (el.required && !el.value) {
-                                el.errorMessage = self.txtInputErrorRequired;
+                                el.errorMessage = this.errorMessage.required;
                             }
 
                         } else {
@@ -180,18 +178,6 @@
                 addElement: function(e) {
                     e.target._parentForm = this;
                     this.elementsForm.push(e.target);
-                },
-                _generateLang: function() {
-                    self = this;
-
-                    i18n.init({
-                        lng: self.lang,
-                        resGetPath: '/locales/__lng__/__ns__.json'
-                    }, function() {
-                        self.txtInputErrorRequired = i18n.t('inputErrorRequired');
-                        self.txtInputErrorEmail = i18n.t('inputErrorEmail');
-                    });
-
                 },
                 properties: {
                     elementsForm: {
@@ -230,6 +216,15 @@
                         type: Boolean,
                         value: false,
                         notify: true
+                    },
+                    errorMessage: {
+                        type: Object,
+                        value: function() {
+                            return {
+                                email: 'Email invalid',
+                                required: 'Field required'
+                            }
+                        }
                     }
                 }
             })
