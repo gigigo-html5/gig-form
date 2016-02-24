@@ -1,6 +1,6 @@
 {
   "name": "gig-form",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/gigigo-html5/gig-form",
   "authors": [
     "Pedro Peña <pedro.jose@gigigo.com>"
@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "iron-ajax": "PolymerElements/iron-ajax#~1.0.4",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.1.1",
     "polymer": "~1.2.0"
   }
 }
