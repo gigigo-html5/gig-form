@@ -6,9 +6,10 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Gig Component fieldMap Demo</title>
-    <link rel="import" href="/demo/gig-form.html">
-    <link rel="import" href="/bower_components/gig-input/gig-input.html">
-    <link rel="import" href="/bower_components/gig-button/gig-button.html">
+    <link rel="import" href="../src/gig-form.html">
+    <link rel="import" href="../bower_components/gig-input/gig-input.html">
+    <link rel="import" href="../bower_components/gig-button/gig-button.html">
+    <link rel="import" href="../bower_components/gig-textarea/gig-textarea.html">
 
     <style is="custom-style">
         .field {
@@ -18,7 +19,6 @@
     </style>
 </head>
 <body>
-
     <gig-form>
         <div class="field">
             <gig-input type="text" name="name" placeholder="name" required></gig-input>
@@ -26,19 +26,16 @@
         <div class="field">
             <gig-input type="text" name="surname" placeholder="surname" required></gig-input>
         </div>
-
         <div class="field">
-            <gig-input type="email" name="email" placeholder="email" required></gig-input>
+            <gig-input type="domain" name="domain" placeholder="domain"></gig-input>
         </div>
-
+        <div class="field">
+            <gig-textarea name="description" editor="true" placeholder="description" required></gig-textarea>
+        </div>
         <div class="field">
             <gig-button type="button" class="btn-danger" on-click="resetHandler">RESET</gig-button>
             <gig-button type="submit" class="btn-primary">SEND</gig-button>
         </div>
-
     </gig-form>
-
-
 </body>
-
 </html>

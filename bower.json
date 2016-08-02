@@ -1,6 +1,6 @@
 {
   "name": "gig-form",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "homepage": "https://github.com/gigigo-html5/gig-form",
   "authors": [
     "Pedro Peña <pedro.jose@gigigo.com>"
@@ -14,8 +14,12 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "~1.0.9",
-    "i18next": "~1.10.2",
-    "iron-ajax": "PolymerElements/iron-ajax#~1.0.4"
+    "iron-ajax": "^1.4.3",
+    "polymer": "^1.6.1"
+  },
+  "devDependencies": {
+    "gig-input": "^0.2.7",
+    "gig-button": "^0.1.7",
+    "gig-textarea": "^0.2.0"
   }
 }
