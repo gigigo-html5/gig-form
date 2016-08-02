@@ -12,7 +12,6 @@
 <dom-module id="gig-form">
 
     <template>
-
         <form id="form"
             action="[[action]]"
             autocomplete="[[autocomplete]]"
@@ -23,7 +22,6 @@
             novalidate>
             <content></content>
         </form>
-
     </template>
 
     <script>
@@ -193,6 +191,19 @@
                         type: Array,
                         value: function() { return [] },
                         notify: true
+                    },
+                    autocomplete: {
+                        type: Boolean,
+                        value: false
+                    },
+                    target: {
+                        type: String
+                    },
+                    type: {
+                        type: String
+                    },
+                    enctype: {
+                        type: String
                     },
                     method: {
                         type: String,
