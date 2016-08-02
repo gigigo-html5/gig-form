@@ -1,10 +1,9 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
 <dom-module id="gig-form">
 
     <template>
-
         <form id="form"
             action="[[action]]"
             autocomplete="[[autocomplete]]"
@@ -15,7 +14,6 @@
             novalidate>
             <content></content>
         </form>
-
     </template>
 
     <script>
@@ -185,6 +183,19 @@
                         type: Array,
                         value: function() { return [] },
                         notify: true
+                    },
+                    autocomplete: {
+                        type: Boolean,
+                        value: false
+                    },
+                    target: {
+                        type: String
+                    },
+                    type: {
+                        type: String
+                    },
+                    enctype: {
+                        type: String
                     },
                     method: {
                         type: String,
